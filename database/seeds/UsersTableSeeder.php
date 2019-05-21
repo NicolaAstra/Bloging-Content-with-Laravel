@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class UsersTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $user = App\User::create([
+            'name' => 'ninja',
+            'email' => 'ninja@gmail.com',
+            'password' => bcrypt('ninja123'),
+            'admin' => 1
+        ]); 
+
+        App\Profile::create([
+            'user_id' => $user->id,
+            'avatar' => 'uploads/avatars/1.png',
+            'about' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi illo molestiae magnam asperiores maxime cumque.',
+            'facebook' => 'facebook.cok',
+            'youtube' => 'youtube.cok'
+        ]);
+    }
+}
