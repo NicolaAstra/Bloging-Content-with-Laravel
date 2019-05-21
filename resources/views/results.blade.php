@@ -14,6 +14,7 @@
                     <div class="row">
                         <div class="case-item-wrap">
                             
+                         @if($posts->count() > 0)
                             @foreach ($posts as $post)
                             <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">
                                 <div class="case-item">
@@ -24,8 +25,11 @@
                                 </div>
                             </div>
                             @endforeach
-
-                           
+                         @else
+                            <h1 class="text-center">
+                                Result not found
+                            </h1>
+                         @endif
                         </div>
                     </div>
 
