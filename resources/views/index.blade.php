@@ -122,7 +122,7 @@
                             <div class="post__content-info">
 
                                     <h2 class="post__title entry-title text-center">
-                                    <a href="15_blog_details.html">{{ $secondPost->title}}</a>
+                                    <a href="{{ route('post.single', ['slug' => $secondPost->slug])}}">{{ $secondPost->title}}</a>
                                     </h2>
 
                                     <div class="post-additional-info">
@@ -172,7 +172,7 @@
                             <div class="post__content-info">
 
                                     <h2 class="post__title entry-title text-center">
-                                        <a href="15_blog_details.html">{{ $thirdPost->title }} </a>
+                                        <a href="{{ route('post.single', ['slug' => $thirdPost->slug])}}">{{ $thirdPost->title }} </a>
                                     </h2>
 
                                     <div class="post-additional-info">
